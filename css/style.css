@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 html{
-    scroll-behavior: smooth;
+    scroll-behavior: smooth
 }
 body{
     background-color: #080808;
@@ -15,7 +15,7 @@ body{
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(../images/background.png);
+     background-image: linear-gradient(rgba(0,0,50,0.8),rgba(0,0,50,0.8)),url(../images/background.png);
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -23,8 +23,6 @@ body{
 
 .container{
     padding: 10px 10%;
- 
-    
 }
 
 nav{
@@ -175,14 +173,19 @@ width: 50%;
 
 .project-list div{
     background-color: #262626;
-    padding: 40px;
+    padding: 15px;
     font-size: 13px;
     font-weight: 300px;
     border-radius: 10px;
     transition: background 0.5s, transform 0.5s;
  
 }
-
+.project-list div img {
+    width: 100%; /* Ensure the image takes the full width of its container */
+    height: auto; /* Maintain the aspect ratio of the image */
+    object-fit: cover; /* Ensure the image covers the entire container */
+    border-radius: 5px; /* Optional: Add border-radius for rounded corners */
+}
 .project-list div i{
     font-size: 50px;
     margin-bottom: 30px;
@@ -243,33 +246,50 @@ width: 50%;
     transform: translateY(-5px);
 }
 
-button{
-    margin-top: 10px;
-    
-    
-}
-
-.btn {
-    justify-content: center;
+/* Style for the button container */
+.btn-field {
     text-align: center;
+}
+
+/* Style for the buttons */
+button {
     display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    text-align: center;
     text-decoration: none;
-    border-radius: 10px;
-    color: black;
-    background-color: white;
-    transition: 0.5s;
-    font-size: 25px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    float: left;
 }
 
-button:hover{
-    background-color: #080808;
+/* Style for the Resume button */
+#RBtn {
+    background-color: black; /* Green */
     color: white;
+    transition: background 1s;
 }
 
-.btn:hover{
-    background-color: #080808;
+/* Style for the GitHub button */
+#GBtn {
+    background-color: black; /* Dark gray */
     color: white;
+    transition: background 1s;
 }
+
+#RBtn:hover {
+    background-color:  #ebf2ff;
+    color: black; /* Darker green on hover */
+    transition: background-color 0.5s ease;
+}
+
+#GBtn:hover {
+    background-color:  #ebf2ff;
+    color: black; /* Darker green on hover */
+}
+
 
 .copyright{
     width: 100%;
@@ -290,8 +310,8 @@ nav .fas{
 }
 @media only screen and (max-width:600px){
     #header{
-        background-image: url(../images/background.png);
-        height: 100vh;
+        background-image: linear-gradient(rgba(0,0,50,0.8),rgba(0,0,50,0.8)),url(../images/background.png);
+        height: 70vh;
         width: 100%;
     }
     .header-text{
@@ -299,13 +319,16 @@ nav .fas{
         font-size: 20px;
     }
     .header-text h1{
-        font-size: 30px;
+        font-size: 26px;
     }
     .button{
     position: absolute;
+
     display: inline-block;
-    
-    
+    }
+
+    .btn-field{
+        /* width: 70%; */
     }
    
     nav .fas{

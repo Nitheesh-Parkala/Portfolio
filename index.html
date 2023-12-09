@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal portfolio</title>
+     <!-- My  logo in the tab -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="data:image/png;base64,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"
+    />
+    <title>Nitheesh Prabhu</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/4a1ce14dc5.js" crossorigin="anonymous"></script>
     
@@ -24,11 +30,16 @@
             </nav>
             <div class="header-text">
                 <h1>I'm<span> Nitheesh Prabhu. </span> </h1>
-                <p>I'm Passionate about Full Stack web development</p>
-            <button><a class="btn" href="https://drive.google.com/drive/folders/1Tk-wOaqFYCYrsOkwG-aFvAJDVf09awCj?usp=sharing">
-                <i class="fa-regular fa-envelope"></i>Resume</a></button> 
-            <button><a class="btn btn1" href="https://github.com/Nitheesh-Parkala">
-                <i class="fa-brands fa-github"></i>GitHUB</a></button> 
+                <p>I'm Passionate about Full Stack web development</p> 
+            <!-- <button><a class="btn btn1" href="https://github.com/Nitheesh-Parkala">
+                <i class="fa-brands fa-github"></i>GitHUB</a></button>  -->
+                <div class="btn-field">
+                    <a href="https://drive.google.com/drive/folders/1Tk-wOaqFYCYrsOkwG-aFvAJDVf09awCj?usp=sharing">
+                    <button type="button" id="RBtn"><i class="fa-regular fa-envelope"></i> Resume</button></a>
+                    <a href="https://github.com/Nitheesh-Parkala">
+                    <button type="button" class="disable" id="GBtn"><i class="fa-brands fa-github"></i> GitHUb</button>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -54,7 +65,7 @@
                         <p class="tab-links active-link "onclick="opentab('skills')">Skills</p>
                     </div>
                     <div class="tab-contents active-tab" id="skills">
-                        <ul> 
+                        <!-- <ul> 
                             <li><img src="images/html-1.svg " height="18px"> <span> HTML5</span></li>
                             <li><span><img src="images/css-3.svg " height="18px"> CSS</span></li>
                             <li><span><img src="images/javascript-1.svg" height="18px"> JavaScript</span></li>
@@ -64,6 +75,12 @@
                             <li> <span> MongoDB</span></li>
                             <li> <span>Visual Studio</span></li>
                             <li> <span>PostMan</span></li>
+                        </ul> -->
+                        <ul>
+                               <li><span>Web Technology:</span> HTML5 | CSS3 | Bootstrap | JavaScript | Node.js</li>
+                               <li><span>Programming Language:</span> Java | Python | SQL</li> 
+                                <li><span>Version Control: </span>Git | GitHub | GitLab</li> 
+                                <li><span>Other:</span> MonogoDB | VS Code | Microsoft Office | PostMan | PowerBi</li> 
                         </ul>
                     </div>
                     <div class="tab-contents" id="Education">
@@ -107,41 +124,37 @@
         <h1 class="sub-title">My Projects</h1>
         <div class="project-list">
             <div>
-                <i class="fa-brands fa-r-project"></i>
-                <h2>Real Time Stock Market Forecasting using Deep Learning</h2>
-                <P>Project on researchers and finance expert on stock market
-                    prediction.<br/>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5ne44ede19canAzYe6g0SHOzkag-tkZ3T_A&usqp=CAU" alt="Real Time Stock Market " />
+                <h2>Real time stock market prediction</h2>
+                <P>The Real-Time Stock Market Prediction project aims to build a system that can predict stock price movements based on historical data and real-time information. This project combines data analysis, machine learning, and real-time data streaming to provide users with valuable insights into the stock market..<br/>
                     Language Used:Python,MySQl.
                 </P>
             </div>
             <div>
-                <i class="fa-brands fa-github"></i>
-                <h2>Personal Portfolio Website</h2>
+                 <img src="data:image/png;base64,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" alt="Personal-portfolio" />
+                <h2>Personal Portfolio Website.</h2>
                 <P>Welcome to my Personal Portfolio Website project! 
-                    This is a special place where I've brought together my passion, creativity, and skills using HTML, CSS, and JavaScript.<br/>
-                    
+                    This is a special place where I've brought together my passion, creativity, and skills using HTML, CSS, and JavaScript.<br/>     
                 </P>
-                <a href="https://github.com/Nitheesh-Parkala/Portfolio.git">Learn more</a>
+                <a href="https://nitheesh-parkala.github.io/Portfolio/"><b>Live Demo...</b></a>
             </div>
             <div>
-                <i class="fa-brands fa-github"></i>
-                <h2>Amzon Clone Website</h2>
-                <P>I have designed a website that provides an overview of an Amazon-like platform 
-                    using HTML and CSS. The website aims to mimic the look and feel of the Amazon website by utilizing the HTML and CSS languages.
+                 <img src="https://i.pinimg.com/736x/03/8e/b3/038eb3caae184920ab02defbbdbd2a03.jpg" alt="Zomato Logo" />
+                <h2>Zomato Landing Page Clone.</h2>
+
+                <P>The Zomato Landing Page Clone replicates the popular food delivery and restaurant discovery platform's interface. With a sleek design, intuitive navigation, and vibrant imagery, the clone provides users with a seamless experience reminiscent of Zomato's original site. From exploring local eateries to ordering delicious meals, the clone captures the essence of Zomato's user-friendly interface for a delightful and familiar browsing experience.
                 </P>
-                <a href="https://github.com/Nitheesh-Parkala/Amazon-Clone.git">Learn more</a>
+                <a href="https://nitheesh-parkala.github.io/Zomato-Landing-Page-Clone/"><b>Live Demo...</b></a>
             </div>
             <div>
-                <i class="fa-brands fa-github"></i>
-                <h2>Odin-Recipes Website</h2>
-                <P> In this project, I have created a collection of recipes using HTML. 
-                    Each recipe is displayed on a separate page, making it easy for users to browse and find the recipe they are interested in. The project includes the following features:
-                    Responsive design: The recipes are optimized for various screen sizes, ensuring a seamless experience across devices. Navigation: Users can easily navigate through the recipe pages using a navigation menu. Ingredients and instructions:
-                     Each recipe page includes a list of ingredients and step-by-step instructions, making it easy for users to follow along.
+                 <img src="https://mir-s3-cdn-cf.behance.net/projects/404/d1c4a6141575157.Y3JvcCwzNDkyLDI3MzIsOTMzLDA.png" alt="Tasky-Appln" />
+                <h2>Tasky Appln.</h2>
+                <P> Developed a task management web app using HTML, CSS, Bootstrap, and JavaScript. Implemented dynamic card creation and modal interactions for tasks, allowing users to add, edit, delete, and search tasks. Utilized local storage to persist data and ensure a seamless user experience.
                 </P>
                 </P>
-                <a href="https://nitheesh-parkala.github.io/odin-recipes/ ">Learn more</a>
+                <a href="https://nitheesh-parkala.github.io/Tasky-AppIn/"><b>Live Demo...</b></a>
             </div>
+            
         </div>
     </div>
    </div>
@@ -163,7 +176,7 @@
     </div>
 </div>
  <div class="copyright">
-    <P><i class="fa-solid fa-copyright"></i> Nitheesh 2023 <i class="fa-solid fa-heart"></i>...</P>
+    <P>Made with <i class="fa-solid fa-heart"></i> by Nitheesh <i class="fa-solid fa-copyright"></i> 2023</P>
  </div>
 </div>
     
