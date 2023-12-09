@@ -7,9 +7,26 @@
 html{
     scroll-behavior: smooth
 }
-body{
-    background-color: #080808;
-    color: white;
+/* body{
+    background-color: #ebf2ff;
+    color: black;
+} */
+/* Default (light mode) colors */
+:root {
+    --body-bg-color-light: #ebf2ff;
+    --body-text-color-light:pink;
+}
+
+/* Dark mode colors */
+body.dark-mode {
+    --body-bg-color-light: black;  /* Change to the desired background color for dark mode */
+    --body-text-color-light: white;   /* Change to the desired text color for dark mode */
+}
+
+/* Body styles */
+body {
+    background-color: var(--body-bg-color-light);
+    color: var(--body-text-color-light);
 }
 
 #header{
@@ -45,19 +62,62 @@ nav ul li{
         
     }
 
-nav ul li a {
+/* nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
     position: relative;
   
+} */
+/* Default (light mode) colors */
+:root {
+     --nav-link-color-light: pink;  
 }
 
-nav ul li a::after{
+/* Dark mode colors */
+body.dark-mode {
+    --nav-link-color-light: white;  /* Change to the desired color for dark mode */
+}
+
+/* Navigation link styles */
+nav ul li a {
+    color: var(--nav-link-color-light);
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+/* Example: Hover effect for the link */
+/* nav ul li a:hover {
+    color: #ff004f;  Change color on hover
+} */
+
+/* nav ul li a::after{
     content: '';
     width: 0;
     height: 3px;
     background-color: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+} */
+/* Default (light mode) colors */
+:root {
+    --after-bg-color-light: white;  /* Change to the desired background color for light mode */
+}
+
+/* Dark mode colors */
+body.dark-mode {
+    --after-bg-color-light: #ff004f;  /* Change to the desired background color for dark mode */
+}
+
+/* Style for ::after pseudo-element */
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: var(--after-bg-color-light);
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -77,14 +137,100 @@ nav ul li a:hover::after{
     font-size: 60px;
     margin-top: 20px;
 }
-span{
+/* span{
     color: #ff004f;;
+} */
+/* Default (light mode) colors */
+:root {
+    --span-color-light: #03fcf0;
+}
+
+/* Dark mode colors */
+body.dark-mode {
+     --span-color-light: #ff004f;  /* Change to the desired color for span in dark mode */
+}
+
+/* Span styles */
+span {
+    color: var(--span-color-light);
+}
+
+/* style.css */
+.dark-mode {
+    background-color: black;
+    color: #ffffff;
+    /* Add other dark mode styles here */
+}
+/* Add these styles to your stylesheet */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 34px;
+}
+.switch input {
+    display: none;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
 }
 
 /* about*/
-#about{
+/* #about{
     padding: 80px 0;
     color:#ababab;
+} */
+
+/* Default (light mode) colors */
+:root {
+    --about-text-color-light: #000;  /* Black color for light mode */
+}
+
+/* Dark mode colors */
+body.dark-mode {
+    --about-text-color-light: #ababab;  /* Light gray color for dark mode */
+}
+
+/* About section styles */
+#about {
+    padding: 80px 0;
+    color: var(--about-text-color-light);
 }
 
 .row{
@@ -106,10 +252,26 @@ span{
     flex-basis: 60%;
 } 
 
-.sub-title{
+/* .sub-title{
     font-size: 60px;
     font-weight: 600px;
     color: white;
+} */
+/* Default (light mode) colors */
+:root {
+    --sub-title-text-color-light: #3258a8;  /* Blue color for light mode */
+}
+
+/* Dark mode colors */
+body.dark-mode {
+    --sub-title-text-color-light: white;  /* White color for dark mode */
+}
+
+/* .sub-title styles */
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: var(--sub-title-text-color-light);
 }
 
 .tab-titles{
@@ -125,11 +287,22 @@ span{
     position: relative;
 }
 
-.tab-links::after{
-    content:'';
+/* Default (light mode) color */
+:root {
+    --tab-links-after-color-light: #3258a8;
+}
+
+/* Dark mode color */
+body.dark-mode {
+    --tab-links-after-color-light: #ff004f;  /* Change to the desired color for dark mode */
+}
+
+/* Tab links styles */
+.tab-links::after {
+    content: '';
     width: 0;
     height: 3px;
-    background-color: #ff004f;
+    background-color: var(--tab-links-after-color-light);
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -145,8 +318,24 @@ width: 50%;
     margin: 10px 0;
 }
 
-.tab-contents ul li span {
+/* .tab-contents ul li span {
     color: #b54769;
+    font-size: 20px;
+    font-weight: 600;
+} */
+/* Default (light mode) colors */
+:root {
+    --tab-span-text-color-light: #3258a8;  /* Blue color for light mode */
+}
+
+/* Dark mode colors */
+body.dark-mode {
+    --tab-span-text-color-light: #b54769;  /* Custom color for dark mode */
+}
+
+/* .tab-contents ul li span styles */
+.tab-contents ul li span {
+    color: var(--tab-span-text-color-light);
     font-size: 20px;
     font-weight: 600;
 }
@@ -170,7 +359,7 @@ width: 50%;
     grid-gap:40px;
     margin-top: 50px;
 }
-
+/* 
 .project-list div{
     background-color: #262626;
     padding: 15px;
@@ -179,7 +368,38 @@ width: 50%;
     border-radius: 10px;
     transition: background 0.5s, transform 0.5s;
  
+} */
+/* Default (light mode) colors */
+:root {
+     --project-list-background-light: #ffffff;
+       /* Dark background color for light mode */
+    --project-list-text-color-light:black;
 }
+
+/* Dark mode colors */
+body.dark-mode {
+    --project-list-background-light: #262626;
+    --project-list-text-color-light:white;  /* White background color for dark mode */
+}
+
+/* .project-list div styles */
+.project-list div {
+    background-color: var(--project-list-background-light);
+    color: var(--project-list-text-color-light);
+    padding: 15px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+    box-shadow:gray;
+}
+
+/* .project-list div hover styles */
+.project-list div:hover {
+    background-color: #ff004f;  /* Change background color on hover */
+    transform: translateY(-10px);  /* Add a subtle transformation on hover */
+}
+
 .project-list div img {
     width: 100%; /* Ensure the image takes the full width of its container */
     height: auto; /* Maintain the aspect ratio of the image */
@@ -193,17 +413,55 @@ width: 50%;
     justify-content: center;
 }
 
-.project-list div a{
+/* .project-list div a{
     text-decoration: none;
     color: #fff;
     font-size: 12px;
     margin-top: 20px;
     display: inline-block;
+} */
+/* Default (light mode) colors */
+:root {
+    --live-demo-color-light: Black;  /* Red color for light mode */
+}
+
+/* Dark mode colors */
+body.dark-mode {
+    --live-demo-color-light: #ffffff;  /* White color for dark mode */
+}
+
+/* .project-list div a styles */
+.project-list div a {
+    text-decoration: none;
+    color: var(--live-demo-color-light);
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/* Example: Hover effect for the link */
+.project-list div a:hover {
+    color: #6d9fab;  /* Change color on hover */
 }
 
 
-.project-list div:hover{
+/* .project-list div:hover{
     background-color: #ff004f;
+    transform: translateY(-10px);
+} */
+/* Default (light mode) colors */
+:root {
+    --project-list-hover-bg-light: #03fcf0;  /* Light blue color for light mode */
+}
+
+/* Dark mode colors */
+body.dark-mode {
+    --project-list-hover-bg-light: #ff004f;  /* Custom color for dark mode */
+}
+
+/* .project-list div:hover styles */
+.project-list div:hover {
+    background-color: var(--project-list-hover-bg-light);
     transform: translateY(-10px);
 }
 
@@ -214,35 +472,107 @@ width: 50%;
 .contact-left p{
     margin-top: 30px;
 }
-.contact-left p a{
+/* .contact-left p a{
     text-decoration: none;
     color: #ababab;
+} */
+/* Default (light mode) colors */
+:root {
+    --contact-link-color-light: black;  /* Light blue color for light mode */
 }
 
-.contact-left p i {
+/* Dark mode colors */
+body.dark-mode {
+    --contact-link-color-light: #ababab;  /* Custom color for dark mode */
+}
+
+/* .contact-left p a styles */
+.contact-left p a {
+    text-decoration: none;
+    color: var(--contact-link-color-light);
+}
+
+/* .contact-left p i {
     color: #ff004f;
     margin-right: 15px;
     font-size: 25px;
     
+} */
+
+/* Default (light mode) colors */
+:root {
+    --contact-icon-color-light: #184ca7;  /* Light blue color for light mode */
 }
 
+/* Dark mode colors */
+body.dark-mode {
+    --contact-icon-color-light: #ff004f;  /* Custom color for dark mode */
+}
+
+/* .contact-left p i styles */
+.contact-left p i {
+    color: var(--contact-icon-color-light);
+    margin-right: 15px;
+    font-size: 25px;
+}
 
 
 .social-icon{
     margin-top: 30px;
 }
 
-.social-icon a{
+/* .social-icon a{
     text-decoration: none;
     font-size: 30px;
     margin-right:30px ;
     color: #ababab;
     display: inline-block;
     transition: 0.5s;
+} */
+/* Default (light mode) colors */
+:root {
+    --social-icon-color-light: #184ca7;  /* Light blue color for light mode */
 }
 
-.social-icon a:hover{
+/* Dark mode colors */
+body.dark-mode {
+    --social-icon-color-light: #ababab;  /* Custom color for dark mode */
+}
+
+/* .social-icon a styles */
+.social-icon a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 30px;
+    color: var(--social-icon-color-light);
+    display: inline-block;
+    transition: 0.5s;
+}
+
+/* .social-icon a hover styles */
+.social-icon a:hover {
+    color: #ff004f;  /* Change color on hover */
+    transform: translateY(-5px);  /* Add a subtle transformation on hover */
+}
+
+
+/* .social-icon a:hover{
     color: #ff004f;
+    transform: translateY(-5px);
+} */
+/* Default (light mode) colors */
+:root {
+    --social-icon-hover-color-light: #3258a8;  /* Light blue color for light mode */
+}
+
+/* Dark mode colors */
+body.dark-mode {
+    --social-icon-hover-color-light: #ff004f;  /* Custom color for dark mode */
+}
+
+/* .social-icon a:hover styles */
+.social-icon a:hover {
+    color: var(--social-icon-hover-color-light);
     transform: translateY(-5px);
 }
 

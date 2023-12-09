@@ -11,7 +11,10 @@ function opentab(tabname){
     event.currentTarget.classList.add("active-link")
     document.getElementById(tabname).classList.add("active-tab");
 }
-
+ function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+        // document.span.classList.toggle('darkMode')
+    }
   var sidemeu = document.getElementById("sidemenu")
 
   function openmenu(){
