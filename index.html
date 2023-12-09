@@ -17,8 +17,14 @@
 <body>
     <div id="header">
         <div class="container">
+            
             <nav>
+                
                 <i class="fa-solid fa-house"> Portfolio </i>
+                    <label class="switch">
+                <input type="checkbox" onclick="toggleDarkMode()">
+               <span class="slider"></span>
+            </label>
                 <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -28,12 +34,10 @@
                 </ul>
                 <i class="fas fa-bars" onclick="openmenu()"></i>
                 <!-- Inside your <nav> element -->
-                     <label class="switch">
-                <input type="checkbox" onclick="toggleDarkMode()">
-               <span class="slider"></span>
-            </label>
+                 
          
 </nav>
+
             <div class="header-text">
                 <h1>I'm<span> Nitheesh Prabhu. </span> </h1>
                 <p>I'm Passionate about Full Stack web development</p> 

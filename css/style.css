@@ -167,6 +167,7 @@ span {
     display: inline-block;
     width: 70px;
     height: 34px;
+    margin-left: 600px;
 }
 .switch input {
     display: none;
@@ -663,6 +664,9 @@ nav .fas{
     .btn-field{
         /* width: 70%; */
     }
+    .switch {
+    margin-left: 50px;
+}
    
     nav .fas{
         display: block;
