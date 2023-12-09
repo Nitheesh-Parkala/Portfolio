@@ -267,21 +267,21 @@ button {
 
 /* Style for the Resume button */
 #RBtn {
-    background-color: black; /* Green */
-    color: white;
+    background-color:  #ebf2ff; 
+    color: black; 
     transition: background 1s;
 }
 
 /* Style for the GitHub button */
 #GBtn {
-    background-color: black; /* Dark gray */
+    background-color: black; 
     color: white;
     transition: background 1s;
 }
 
 #RBtn:hover {
-    background-color:  #ebf2ff;
-    color: black; /* Darker green on hover */
+    background-color: black;
+     color: white;
     transition: background-color 0.5s ease;
 }
 
