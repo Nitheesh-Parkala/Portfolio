@@ -433,16 +433,19 @@ body.dark-mode {
 
 /* .project-list div a styles */
 .project-list div a {
-    text-decoration: none;
+    /* text-decoration: none; */
     color: var(--live-demo-color-light);
     font-size: 12px;
     margin-top: 20px;
     display: inline-block;
+    transition: font-size 0.5s ease-in-out;    
 }
 
 /* Example: Hover effect for the link */
 .project-list div a:hover {
-    color: #6d9fab;  /* Change color on hover */
+    font-size: 17px;
+    /* transition: font-size 0.3s ease;  */
+
 }
 
 
@@ -601,6 +604,7 @@ button {
     background-color:  #ebf2ff; 
     color: black; 
     transition: background 1s;
+    font-weight: 800px;
 }
 
 /* Style for the GitHub button */
@@ -608,6 +612,7 @@ button {
     background-color: black; 
     color: white;
     transition: background 1s;
+    /* font-weight: 800px; */
 }
 
 #RBtn:hover {
